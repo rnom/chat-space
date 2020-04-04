@@ -8,6 +8,9 @@
     height: 100px;
     display: flex;
     align-items: center;
+    position: fixed;
+    top: 0;
+    width: 300px;
     &__top-items {
       height: 20px;
       width: 260px;
@@ -31,22 +34,26 @@
       }
     }
   }
-  &__group-list {
+  .groups {
     background-color: #2f3e51;
     height: calc(100vh - 100px);
-    &__group {
+    position: fixed;
+    bottom: 0;
+    width: 300px;
+    .group {
       font-weight: bold;
-      padding: 20px 20px 40px 20px;
-      .box {  
-        text-decoration: none;
+      padding: 20px 20px 20px 20px;
+      text-decoration: none;
+      &__name {
+        font-size: 15px;
+        margin-bottom: 5px;
         color: $fontColor;
-        .group__name {
-          font-size: 15px;
-          margin-bottom: 5px;
-        }
-        .group__message {
-          font-size: 11px;
-        }
+        text-decoration: none;
+      }
+      &__message {
+        font-size: 11px;
+        color: $fontColor;
+        text-decoration: none;
       }
     }
   }
